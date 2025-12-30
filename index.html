@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File Size Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BACKGROUND ANIMATION -->
+  <div class="bg-blobs">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>File Size Calculator</h1>
+    <p>Instantly convert file sizes between KB, MB, and GB</p>
+
+    <button class="start-btn"
+      onclick="document.getElementById('calculator').scrollIntoView({behavior:'smooth'})">
+      Start Calculator
+    </button>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calculator" class="calculator-section">
+    <div class="card">
+      <h2>Calculator</h2>
+
+      <input
+        type="number"
+        id="sizeInput"
+        placeholder="Enter file size (e.g. 2048)"
+      />
+
+      <div class="row">
+        <select id="fromUnit">
+          <option value="KB">KB</option>
+          <option value="MB">MB</option>
+          <option value="GB">GB</option>
+        </select>
+
+        <span>→</span>
+
+        <select id="toUnit">
+          <option value="KB">KB</option>
+          <option value="MB">MB</option>
+          <option value="GB">GB</option>
+        </select>
+      </div>
+
+      <button class="calc-btn" onclick="calculateSize()">Calculate</button>
+
+      <p id="result" class="result">Result will appear here</p>
+    </div>
+  </section>
+
+  <footer>
+    Built with HTML, CSS & JavaScript
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
